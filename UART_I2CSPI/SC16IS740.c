@@ -25,18 +25,14 @@ void sc16is740_reset(void)
     _wrReg(SC16IS740_REG_IOCONTROL, reg);
 }
 
-void sc16is740_baud(uint32_t baudrate) 
+void sc16is740_baud(uint32_t baudrate_divisor) 
 {
-    uint16_t prescaler = (_rdReg(SC16IS740_REG_MCR)&0x80)? 4:1; 
-    uint16_t divisor   = (SC16IS740_CRYSTCAL_FREQ/prescaler)/(baudrate*16);
     uint8_t temp_lcr   = _rdReg(SC16IS740_REG_LCR);
 
-    _wrReg(SC16IS740_REG_LCR,(temp_lcr|0x80));         //diable generator
-
-    _wrReg(SC16IS740_REG_DLL,(uint8_t)divisor);        //set DLL
-    _wrReg(SC16IS740_REG_DLH,(uint8_t)(divisor>>8));   //set DLH
-
-    _wrReg(SC16IS740_REG_LCR,temp_lcr);                //restore generator
+    _wrReg(SC16IS740_REG_LCR,(temp_lcr|0x80));         //enable br generator latch
+    _wrReg(SC16IS740_REG_DLL,(uint8_t)divisor_divisor);        
+    _wrReg(SC16IS740_REG_DLH,(uint8_t)(divisor_divisor>>8));   
+    _wrReg(SC16IS740_REG_LCR,temp_lcr);                //start br generator
 }
 
 void sc16is740_format(uint8_t data_length, uint8_t parity_select, uint8_t stop_length )

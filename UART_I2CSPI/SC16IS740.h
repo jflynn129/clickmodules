@@ -47,17 +47,19 @@
 #define     SC16IS740_INT_RHR        (0X01)
 
 //Application Related 
-#define     SC16IS740_CRYSTCAL_FREQ  (14745600UL) 
+#define     SC16IS740_CRYSTCAL_FREQ  (1843200UL) 
 #define     SC16IS740_PROTOCOL_I2C   (0)
 #define     SC16IS740_PROTOCOL_SPI   (1)
 
-#define     SC16IS740_B9600   // 9600 baud
-#define     SC16IS740_B19200  // 19200 baud
-#define     SC16IS740_B3400   // 38400 baud
-#define     SC16IS740_B19200  // 19,200 buad
-#define     SC16IS740_B57600  // 57,600 baud
-#define     SC16IS740_B76800  // 76,800 baud
-#define     SC16IS740_B115200 // 115,200 baud
+//
+// Baud Rate generator caculated by:
+//     divisor = (SC16IS740_CRYSTCAL_FREQ/prescaler(is 1))/(baudrate*16);
+//
+#define     SC16IS740_B9600          (12)  // 9600 baud
+#define     SC16IS740_B19200         (06)  // 19200 baud
+#define     SC16IS740_B38400         (03)  // 38400 baud
+#define     SC16IS740_B57600         (02)  // 57,600 baud
+#define     SC16IS740_B115200        (01)  // 115,200 baud
 
 #define     SC16IS740_CS5            (0x00) // 5 data bits
 #define     SC16IS740_CS6            (0x01) // 6 data bits

@@ -81,6 +81,11 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.lib.release.1464907903" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.lib.release">
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.lib.release.option.optimization.level.1048794912" name="Optimization Level" superClass="gnu.c.compiler.lib.release.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.lib.release.option.debugging.level.1202644667" name="Debug Level" superClass="gnu.c.compiler.lib.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1756795654" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/home/jim/Avnet/clickmodule/LIGHTRANGER/platform/inc"/>
+									<listOptionValue builtIn="false" value="/home/jim/Avnet/clickmodule/LIGHTRANGER/core/inc"/>
+									<listOptionValue builtIn="false" value="/home/jim/Avnet/clickmodule/OLED-B"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1210925492" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.1641783333" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base"/>

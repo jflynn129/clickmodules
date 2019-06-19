@@ -1,0 +1,76 @@
+﻿  In file included from main.c:20:
+lcdmini.h(58,1): warning :  function declaration isn't a prototype [-Wstrict-prototypes]
+lcdmini.h(58,1): warning :  int    open_lcdmini(void (*init)(),void (*cs1)(),void (*cs2)(),void (*rst)(),void (*fpwm)(),void (*spi_tx)(uint8_t*,int));
+lcdmini.h(58,1): warning :  ^~~
+lcdmini.h(58,1): warning :  function declaration isn't a prototype [-Wstrict-prototypes]
+lcdmini.h(58,1): warning :  function declaration isn't a prototype [-Wstrict-prototypes]
+lcdmini.h(58,1): warning :  function declaration isn't a prototype [-Wstrict-prototypes]
+lcdmini.h(58,1): warning :  function declaration isn't a prototype [-Wstrict-prototypes]
+lcdmini.h(58,1): warning : main.c: In function 'init':
+main.c(190,10): warning :  'return' with a value, in function returning void
+main.c(190,10): warning :    return -1;
+main.c(190,10): warning :           ^
+main.c(190,10): warning : main.c:176:6: note: declared here
+main.c(190,10): warning :  void init(void)
+main.c(190,10): warning :       ^~~~
+main.c(200,10): warning :  'return' with a value, in function returning void
+main.c(200,10): warning :    return -1;
+main.c(200,10): warning :           ^
+main.c(200,10): warning : main.c:176:6: note: declared here
+main.c(200,10): warning :  void init(void)
+main.c(200,10): warning :       ^~~~
+main.c(208,10): warning :  'return' with a value, in function returning void
+main.c(208,10): warning :    return -1;
+main.c(208,10): warning :           ^
+main.c(208,10): warning : main.c:176:6: note: declared here
+main.c(208,10): warning :  void init(void)
+main.c(208,10): warning :       ^~~~
+main.c(215,10): warning :  'return' with a value, in function returning void
+main.c(215,10): warning :    return -1;
+main.c(215,10): warning :           ^
+main.c(215,10): warning : main.c:176:6: note: declared here
+main.c(215,10): warning :  void init(void)
+main.c(215,10): warning :       ^~~~
+main.c(215,10): warning : main.c: In function 'rst':
+main.c(228,24): warning :  conversion from 'int' to 'GPIO_Value_Type' {aka 'unsigned char'} may change value [-Wconversion]
+main.c(228,24): warning :   GPIO_SetValue(rst_fd, state);
+main.c(228,24): warning :                         ^~~~~
+main.c(228,24): warning : main.c: In function 'spi_tx':
+main.c(236,29): warning :  conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+main.c(236,29): warning :   write(spiFd, data_to_send, length);
+main.c(236,29): warning :                              ^~~~~~
+main.c(236,29): warning : At top level:
+main.c(29,12): warning :  'cs2_fd' defined but not used [-Wunused-variable]
+main.c(29,12): warning :  static int cs2_fd = -1;
+main.c(29,12): warning :             ^~~~~~
+main.c(28,12): warning :  'cs_fd' defined but not used [-Wunused-variable]
+main.c(28,12): warning :  static int cs_fd = -1;
+main.c(28,12): warning :             ^~~~~
+  Azure Sphere Utility version 19.5.4.53731
+  Copyright (C) Microsoft Corporation. All rights reserved.
+   
+  Start time (UTC): Wednesday, 12 June 2019 22:20:18 
+  verbose: Creating image package. 
+  verbose: Azure Sphere application image package written. 
+  verbose: Appending metadata. 
+  verbose: Wrote metadata:
+    Section: Identity
+      Image Type:           Application
+      Component ID:         38a5ca47-c21e-4b5b-a111-2510da1e3dd3
+      Image ID:             9a0bd68d-9840-40f3-a5bf-3fd00b6380c7
+    Section: Signature
+      Signing Type:         ECDsa256
+      Cert:                 a8d5cc6958f48710140d7a26160fc1cfc31f5df0
+    Section: Debug
+      Image Name:           LCDmini
+      Built On (UTC):       6/12/2019 10:20:18 PM
+      Built On (Local):     6/12/2019 5:20:18 PM
+    Section: Temporary Image
+      Remove image at boot: False
+      Under development:    True
+    Section: ABI Depends
+      Depends on:           ApplicationRuntime, version 2
+   
+  verbose: Packaging completed successfully. 
+  verbose: Output file is at: C:\Users\mxuser\source\repos\LCDmini\LCDmini\bin\ARM\Release\LCDmini.imagepackage 
+  Command completed successfully in 00:00:00.4173601. 
